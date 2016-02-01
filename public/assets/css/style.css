@@ -1,0 +1,13 @@
+.video-js .vjs-big-play-button {
+    margin: 0 auto;
+    top: 44%;
+	    right: 0;
+}
+section {display:"none"}
+#listVideo .thumbnail:hover {
+	cursor: pointer;
+	border-color: #eeeeee;
+	-webkit-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.24);
+}

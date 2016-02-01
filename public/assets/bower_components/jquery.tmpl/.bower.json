@@ -1,0 +1,13 @@
+{
+  "name": "jquery.tmpl",
+  "_cacheHeaders": {
+    "ETag": "\"a23092be81bbacea6ae00d5d4345cb747ec8de20\"",
+    "Content-Length": "19093",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:a23092be8",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/BorisMoore/jquery-tmpl/master/jquery.tmpl.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/BorisMoore/jquery-tmpl/master/jquery.tmpl.js"
+}

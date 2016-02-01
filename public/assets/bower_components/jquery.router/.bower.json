@@ -1,0 +1,13 @@
+{
+  "name": "jquery.router",
+  "_cacheHeaders": {
+    "ETag": "\"a9b23195b3d821f27a9caaba47cac59cd9d3102e\"",
+    "Content-Length": "10495",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:a9b23195b",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/camme/jquery-router-plugin/master/jquery.router.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/camme/jquery-router-plugin/master/jquery.router.js"
+}

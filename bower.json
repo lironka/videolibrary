@@ -1,0 +1,29 @@
+{
+  "name": "laravel",
+  "description": "Test application",
+  "main": "",
+  "authors": [
+    "oflops <oflops@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "test"
+  ],
+  "moduleType": [],
+  "homepage": "http://google.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "jquery-1.12.0": "http://code.jquery.com/jquery-1.12.0.js",
+    "bootstrap": "~3.3.6",
+    "jquery.router": "https://raw.githubusercontent.com/camme/jquery-router-plugin/master/jquery.router.js",
+    "jquery.tmpl": "https://raw.githubusercontent.com/BorisMoore/jquery-tmpl/master/jquery.tmpl.js"
+  }
+
+}
