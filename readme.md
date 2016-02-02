@@ -1,27 +1,59 @@
-## Laravel PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+# Requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+* PHP 5.5+
+* MySQL 5.0+
+* NodeJS 0.12+ ?
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Setup Database
 
-## Official Documentation
+```
+DROP DATABASE IF EXISTS `videolibrary`;
+CREATE DATABASE IF NOT EXISTS `videolibrary` DEFAULT CHARACTER SET utf8;
+GRANT ALL PRIVILEGES ON *.* TO user@localhost IDENTIFIED BY 'secret';
+```
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Setup Laravel application
 
-## Contributing
+Скопировать файл .env.example в .env
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Поменять параметры соединения с базой данных
 
-## Security Vulnerabilities
+Пример настроек 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+DB_HOST=localhost
+DB_DATABASE=videolibrary
+DB_USERNAME=user
+DB_PASSWORD=secret
+```
 
-### License
+Загрузить дамп структуры и тестовый набор данных
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Пример загрузки через консоль mysql
+
+```
+mysql -uuser -psecret videolibrary < database/schema.sql
+mysql -uuser -psecret videolibrary < database/sample.sql
+```
+
+## Install composer
+
+manual https://getcomposer.org/doc/00-intro.md
+
+```php -r "readfile('https://getcomposer.org/installer');" | php```
+
+## Install Node modules
+
+```
+npm install -g webpack
+npm install -g bower
+```
+
+## Resolve dependencies
+
+```
+php composer.phar update
+npm update
+bower update
+```
