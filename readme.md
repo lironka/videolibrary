@@ -13,6 +13,13 @@ CREATE DATABASE IF NOT EXISTS `videolibrary` DEFAULT CHARACTER SET utf8;
 GRANT ALL PRIVILEGES ON *.* TO user@localhost IDENTIFIED BY 'secret';
 ```
 
+## Get copy of source code
+
+```
+cd /var/www
+git clone https://github.com/lironka/videolibrary.git
+```
+
 ## Setup Laravel application
 
 Скопировать файл .env.example в .env
