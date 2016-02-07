@@ -127,7 +127,7 @@
 	<div class="js-rateVideo"></div>
 </script>
 <script id="ratingTmpl" type="text/x-jquery-tmpl">
-	<p><strong>Rating:</strong> ${rate} (${rating})</p>
+	<p><strong>Rating:</strong> ${rate} [${rating}]</p>
 </script>
 <script id="viewListComments" type="text/x-jquery-tmpl">
 	<div class="media well">
