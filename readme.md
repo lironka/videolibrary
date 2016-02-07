@@ -60,7 +60,7 @@ npm install -g bower
 ## Resolve dependencies
 
 ```
-php composer.phar update
-npm update
-bower update
+php composer.phar install
+npm install
+bower install
 ```
