@@ -19,11 +19,9 @@
     "test",
     "tests"
   ],
-   "dependencies": {
-    "jquery-1.12.0": "http://code.jquery.com/jquery-1.12.0.js",
+  "dependencies": {
+    "jquery-1.12.0.min": "http://code.jquery.com/jquery-1.12.0.min.js",
     "bootstrap": "~3.3.6",
-    "jquery.router": "https://raw.githubusercontent.com/camme/jquery-router-plugin/master/jquery.router.js",
-    "jquery.tmpl": "https://raw.githubusercontent.com/BorisMoore/jquery-tmpl/master/jquery.tmpl.js"
+    "jquery.tmpl.min": "https://raw.githubusercontent.com/BorisMoore/jquery-tmpl/master/jquery.tmpl.min.js"
   }
-
 }

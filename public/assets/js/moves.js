@@ -85,10 +85,10 @@ function addVideoComment (videoId, content, success, error)  {
 /*
 	Request POST Rating of video
 */
-function addVideoRating (videoId, rate, success, error) {
+function addVideoRating (videoId, rating, success, error) {
 	$.ajax({
 		url: '/api/video/'+ videoId +'/rating',
-		data: {rate: rate},
+		data: {rate: rating},
 		method: 'POST',
 	}).success(function(data) {
 		success(data); 

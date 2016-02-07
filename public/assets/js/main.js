@@ -72,7 +72,7 @@ $(document).ready(function () {
 			//Reload main video
 			LoadMainVideo( $(this).data('videosrc'), $(this).children()[0].currentSrc); 
 		});
-		
+		$videoIdMain =$listVideo.children().first().data('videoid');
 		$listVideo.children().first().click();
 		
 		$('#indexPage').show(); // show only one panel
