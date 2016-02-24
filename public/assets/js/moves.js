@@ -1,7 +1,9 @@
+function Route() {}
+
 /*
 	Request get all videos
 */
-function getAllVideos(success, error){
+Route.prototype.getAllVideos = function(success, error){
 	$.ajax({
 		url: '/api/video/all',
 		method: 'GET',
@@ -17,7 +19,7 @@ function getAllVideos(success, error){
 /*
 	Request get the video
 */
-function getVideoData(videoId, success, error){
+Route.prototype.getVideoData = function(videoId, success, error){
 	$.ajax({
 		url: '/api/video/'+videoId+'/data',
 		method: 'GET',
@@ -34,7 +36,7 @@ function getVideoData(videoId, success, error){
 /*
 	Request GET Rate of video
 */
-function getVideoRating (videoId, success, error){
+Route.prototype.getVideoRating = function (videoId, success, error){
 	$.ajax({
 		url: '/api/video/' + videoId +'/rating',
 		method: 'GET',
@@ -51,7 +53,7 @@ function getVideoRating (videoId, success, error){
 /*
 	Request GET Comment of video
 */
-function getVideoComment (videoId, success, error) {
+Route.prototype.getVideoComment = function (videoId, success, error) {
 	$.ajax({
 		url: '/api/video/'+ videoId +'/comments',
 		method: 'GET',
@@ -68,7 +70,7 @@ function getVideoComment (videoId, success, error) {
 /*
 	Request POST Comment of video
 */
-function addVideoComment (videoId, content, success, error)  {
+Route.prototype.addVideoComment = function (videoId, content, success, error)  {
 	$.ajax({
 		url: '/api/video/'+ videoId +'/comments',
 		data: {comment: content},
@@ -85,7 +87,7 @@ function addVideoComment (videoId, content, success, error)  {
 /*
 	Request POST Rating of video
 */
-function addVideoRating (videoId, rating, success, error) {
+Route.prototype.addVideoRating = function (videoId, rating, success, error) {
 	$.ajax({
 		url: '/api/video/'+ videoId +'/rating',
 		data: {rate: rating},
@@ -99,3 +101,9 @@ function addVideoRating (videoId, rating, success, error) {
 		}
 	});
 }
+
+Route.prototype.cl = function () {
+	console.log("obj");
+};
+
+module.exports = new Route();

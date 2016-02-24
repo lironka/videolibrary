@@ -101,15 +101,12 @@
 	<hr>
 </footer>
 
-<script src="/assets/bower_components/jquery-1.12.0.min/index.js"></script>
+<script src="/assets/bower_components/jquery-1.12.1.min/index.js"></script>
 <script src="http://vjs.zencdn.net/5.4.6/video.js"></script>
 <script src="/assets/js/jquery.router.js"></script>
 <script src="/assets/bower_components/jquery.tmpl.min/index.js"></script>
 
-<!--script type="text/javasscript" src="/build/bundle.js"></script-->
-
-<script src="/assets/js/moves.js" type="text/javascript"></script>
-<script src="/assets/js/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="/build/bundle.js"></script>
 
 <script id="videoListTmpl" type="text/x-jquery-tmpl">
  	<div class="thumbnail" data-videoid="${id}" data-videosrc="${url}">

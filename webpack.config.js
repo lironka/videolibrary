@@ -1,9 +1,16 @@
-//var path = require("path");
-//var webpack = require("webpack");
+var webpack = require("webpack");
+
 module.exports = {
-    entry: "./public/assets/js/main.js",
+	context: __dirname + "/public/assets/js/",
+	
+    entry: "./main.js",
     output: {
-        path: __dirname,
-        filename: "./public/build/bundle.js"
+        path: __dirname + "/public/build",
+        filename: "bundle.js"
+    },	
+	
+	resolve: {
+        root: __dirname + "/public/assets/bower_components"
     }
+	
 };

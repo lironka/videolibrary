@@ -1,3 +1,9 @@
+//var rr = require('imports?$=jquery!exports?$!jquery.router');
+
+//console.log(rr);
+console.log( $('h1').text() );
+
+var Route = require('./moves.js');
 $(document).ready(function () {
 	
 	function videoHTML(urlVideo,urlPoster) {
@@ -21,7 +27,7 @@ $(document).ready(function () {
 	
 	// Give Rate for main video
 	function giveRate (videoId) {
-		getVideoRating(videoId, rateRander, ajaxFailHandler) ;
+		Route.getVideoRating(videoId, rateRander, ajaxFailHandler) ;
 		function rateRander (data){
 			data.rate = Math.round(data.rating);
 			$('.js-rateVideo').html($('#ratingTmpl').tmpl(data));
@@ -34,11 +40,11 @@ $(document).ready(function () {
 	var pathname = window.location.pathname;	
 	
 	$.router.add("/", function(data){
-		getAllVideos(renderVideoList, ajaxFailHandler);
+		Route.getAllVideos(renderVideoList, ajaxFailHandler);
 	});
 
 	$.router.add("/video/:id", function(data){
-		getVideoData(data.id, renderVideoData, ajaxVideoFailHandler);
+		Route.getVideoData(data.id, renderVideoData, ajaxVideoFailHandler);
 	});
 
 	$.router.go(pathname);
@@ -53,7 +59,7 @@ $(document).ready(function () {
 	
 	function ajaxVideoFailHandler (data) {
 		$.router.go("/");
-		getAllVideos(renderVideoList, ajaxFailHandler); 
+		Route.getAllVideos(renderVideoList, ajaxFailHandler); 
 	}
 	
 	//Set list of videos	
@@ -109,7 +115,7 @@ $(document).ready(function () {
 		data[0].date_insert = renderDateFromMysql(data[0].date_insert, true);
 		data[0].rate = giveRate(data[0].id);
     	$('#aboutVideo').html( $('#videoDetailsTmpl').tmpl(data[0]) );
-		getVideoComment(data[0].id, randerComments, ajaxFailHandler);
+		Route.getVideoComment(data[0].id, randerComments, ajaxFailHandler);
 		$('#videoPage').show(); // show only one panel
 	}
 	
@@ -128,7 +134,7 @@ $(document).ready(function () {
 			return;
 		}
 		//Post comment
-		addVideoComment($videoIdMain, $commitText.val(), successComment, ajaxFailHandler);
+		Route.addVideoComment($videoIdMain, $commitText.val(), successComment, ajaxFailHandler);
 		
 	});
 	
@@ -146,7 +152,7 @@ $(document).ready(function () {
 		if( isNaN(parseInt( $(this).text() )) || $(this).text() <1 || $(this).text() >5){
 			return;
 		}
-		addVideoRating( $videoIdMain, $(this).text(), successRating, ajaxFailHandler);
+		Route.addVideoRating( $videoIdMain, $(this).text(), successRating, ajaxFailHandler);
 	});
 
 
