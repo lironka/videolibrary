@@ -7,10 +7,17 @@ module.exports = {
     output: {
         path: __dirname + "/public/build",
         filename: "bundle.js"
-    },	
+    },
 	
-	resolve: {
-        root: __dirname + "/public/assets/bower_components"
-    }
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false,
+				drop_console: true,
+				unsafe: true
+			}
+		})
+	]
+	
 	
 };

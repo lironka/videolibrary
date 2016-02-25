@@ -1,8 +1,3 @@
-//var rr = require('imports?$=jquery!exports?$!jquery.router');
-
-//console.log(rr);
-console.log( $('h1').text() );
-
 var Route = require('./moves.js');
 $(document).ready(function () {
 	
